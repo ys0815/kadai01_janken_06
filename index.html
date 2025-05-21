@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>キッズもニッコリ★じゃんけんアプリ</title>
+		<link rel="stylesheet" href="https://unpkg.com/ress@4.0.0/dist/ress.min.css" />
+		<link rel="stylesheet" href="./css/style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Stick&display=swap" rel="stylesheet" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<main>
+			<div class="container">
+				<div class="jkp"><img src="./img/jyanken-top.png" alt="" /></div>
+				<h1 class="speechBubble">
+					いざ…<span class="br-sp"><br /></span>じゃんけん勝負！
+				</h1>
+				<div class="cpu-hand">
+					<img id="cpuImage" src="./img/gu-1.png" alt="CPUの手" />
+				</div>
+				<div class="buttons">
+					<button data-choice="gu" class="gu">グー</button>
+					<button data-choice="choki" class="choki">チョキ</button>
+					<button data-choice="pa" class="pa">パー</button>
+				</div>
+				<div id="result"></div>
+				<div class="re-button"><button id="reset-button">もう一回勝負！</button></div>
+			</div>
+		</main>
+
+		<audio id="win-sound" src="./sound/maou_game_jingle01.mp3"></audio>
+		<script src="./js/main.js"></script>
+	</body>
+</html>

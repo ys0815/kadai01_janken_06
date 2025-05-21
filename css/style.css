@@ -1,0 +1,219 @@
+/* --------------------------------
+  Base Styles
+-------------------------------- */
+body {
+	font-family: "Yusei Magic", sans-serif;
+	text-align: center;
+	background-color: #fdf0c4;
+	padding: 20px;
+	height: 100vh;
+}
+img {
+	max-width: 90%;
+	height: auto;
+}
+@media screen and (max-width: 768px) {
+	body {
+		padding: 10px;
+	}
+}
+/* --------------------------------
+  見出し
+-------------------------------- */
+.speechBubble {
+	position: relative;
+	display: inline-block;
+	margin-bottom: 30px;
+	padding: 16px;
+	border: 5px solid #000000;
+	border-radius: 50px;
+	background-color: #ffffff;
+	text-align: center;
+	font-size: 45px;
+	font-weight: 400;
+	line-height: 1.5;
+	letter-spacing: 0.1em;
+	color: #000000;
+}
+
+.speechBubble::before {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	border-style: solid;
+	border-width: 30px 15px 0 15px;
+	border-color: #000000 transparent transparent;
+	translate: -50% 100%;
+}
+
+.speechBubble::after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	border-style: solid;
+	border-width: 18.8px 9.4px 0 9.4px;
+	border-color: #ffffff transparent transparent;
+	translate: -50% 100%;
+}
+/* デフォルトでは br を非表示 */
+.br-sp {
+	display: none;
+}
+
+@media screen and (max-width: 768px) {
+	.speechBubble {
+		font-size: 30px;
+	}
+	.br-sp {
+		display: inline;
+	}
+}
+
+/* --------------------------------
+  container
+-------------------------------- */
+.container {
+	max-width: 800px;
+	margin: 0 auto;
+	text-align: center;
+	padding: 20px;
+}
+@media screen and (max-width: 768px) {
+	.container {
+		padding: 15px;
+	}
+}
+/* --------------------------------
+  じゃんけんTOP見出し画像
+-------------------------------- */
+.jkp {
+	width: 60%;
+	height: auto;
+	margin: 0 auto 20px auto;
+}
+@media screen and (max-width: 768px) {
+	.jkp {
+		width: 90%;
+	}
+}
+/* --------------------------------
+  CPUのじゃんけん画像
+-------------------------------- */
+.cpu-hand img {
+	width: auto;
+	height: 300px;
+	margin: 30px 0;
+}
+@media screen and (max-width: 768px) {
+	.cpu-hand img {
+		height: 250px;
+		margin: 15px 0;
+	}
+}
+/* --------------------------------
+  ぐー・ちょき・ぱーButton
+-------------------------------- */
+.buttons {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-bottom: 20px;
+}
+
+.buttons button {
+	font-size: 25px;
+	font-weight: bold;
+	color: azure;
+	margin: 10px;
+	padding: 15px 40px;
+	cursor: pointer;
+	border-radius: 20px;
+}
+
+.buttons .gu {
+	background-color: #1cb5e3;
+}
+.buttons .gu:hover {
+	background-color: #8de4ff;
+}
+.buttons .choki {
+	background-color: #faa700;
+}
+.buttons .choki:hover {
+	background-color: #ffd88b;
+}
+.buttons .pa {
+	background-color: #ff6e61;
+}
+.buttons .pa:hover {
+	background-color: #ff988f;
+}
+@media screen and (max-width: 768px) {
+	.buttons button {
+		font-size: 20px;
+		padding: 10px 20px;
+		margin: 10px;
+		border-radius: 10px;
+	}
+}
+/* --------------------------------
+  もう一回勝負！Button
+-------------------------------- */
+.re-button {
+	text-align: center;
+}
+
+.re-button button {
+	display: inline-block;
+	text-align: center;
+	text-decoration: none;
+	margin: 0 auto;
+	padding: 1rem 4rem;
+	font-weight: bold;
+	font-size: 20px;
+	border: 5px solid #333;
+	background: #ffffff;
+	color: #333;
+	border-radius: 20px;
+	transition: 0.5s;
+	animation: move_c 1s infinite;
+}
+/* アニメーション */
+@keyframes move_c {
+	0% {
+		transform: translate(0px, 0);
+	}
+	50% {
+		transform: translate(0px, 0) rotateZ(5deg);
+	}
+}
+.re-button button:hover {
+	color: #d92727;
+	border: 5px solid #d92727;
+	background: #fff;
+}
+@media screen and (max-width: 768px) {
+	.re-button button {
+		font-size: 18px;
+		padding: 0.6rem 1.5rem;
+		border-width: 2px;
+		border-radius: 10px;
+		margin: 0 auto;
+	}
+}
+/* --------------------------------
+  結果表示
+-------------------------------- */
+#result {
+	margin: 10px 0 20px 0;
+	font-size: 30px;
+	font-weight: bold;
+}
+@media screen and (max-width: 768px) {
+	#result {
+		font-size: 30px;
+		margin: 10px 0 20px 0;
+	}
+}

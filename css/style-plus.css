@@ -1,0 +1,156 @@
+:root {
+	--main-bg-color: #d6e4f5;
+	--main-font: "Zen Kaku Gothic New", sans-serif;
+	--title-font: "Zen Old Mincho", serif;
+	--btn-bg-color: #53b9f5;
+	--quiz-container-width: 800px;
+	--quiz-container-padding: 30px;
+	--main-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	--title-color: #333;
+}
+
+body {
+	background-image: url(/img/kangaeru-hito.png);
+	background-position: bottom;
+	background-size: 500px;
+	font-family: var(--main-font);
+	background-color: var(--main-bg-color);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 100vh;
+	letter-spacing: 0.1em;
+}
+
+.btn-primary {
+	background-color: var(--btn-bg-color);
+	border: var(--btn-bg-color);
+}
+
+.btn {
+	width: 150px;
+	padding: 20px 30px;
+	white-space: nowrap;
+}
+
+.quiz-container {
+	position: fixed;
+	background-color: #fff;
+	/* border-radius: 8px; */
+	/* box-shadow: var(--main-box-shadow); */
+	width: var(--quiz-container-width);
+	height: auto;
+	top: 100px;
+	overflow: hidden;
+}
+.quiz-container:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	border-width: 0 50px 50px 0;
+	border-style: solid;
+	border-color: #fff #d6e4f6 #c0cedf #000000;
+	background: #658e15;
+	display: block;
+	width: 0;
+	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), -1px 1px 1px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), -1px 1px 1px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), -1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+.inner {
+	margin: var(--quiz-container-padding);
+	max-width: 100%;
+}
+
+.quiz-title h2 {
+	font-family: var(--title-font);
+	font-size: 40px;
+	padding: 0 65px;
+	margin-bottom: 50px;
+	text-align: center;
+	color: var(--title-color);
+	font-weight: bold;
+	word-break: break-all;
+}
+h2 span {
+	color: #0b5ed7;
+	font-size: 45px;
+}
+
+.question-area {
+	text-align: center;
+	margin-top: 1rem;
+	word-break: break-word;
+	padding: 0 10px;
+}
+
+.choices {
+	margin-top: 50px;
+	display: grid;
+	gap: 10px;
+	grid-template-columns: 1fr 1fr;
+}
+
+.choices button {
+	font-size: 20px;
+	font-weight: bold;
+	padding: 20px 30px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	width: auto;
+}
+
+.hidden {
+	display: none;
+}
+
+#answer-area {
+	margin: 20px 0;
+}
+
+.answer-message {
+	margin-top: 1rem;
+	font-weight: bold;
+	padding: 0 10px;
+	word-break: break-word;
+}
+
+.next-button {
+	margin-top: 10px;
+	padding: 10px 20px;
+}
+.dli-caret-circle-fill-right {
+	display: inline-block;
+	vertical-align: middle;
+	color: #052c65;
+	line-height: 1;
+	position: relative;
+	width: 45px;
+	height: 45px;
+	border: 0.075em solid currentColor;
+	background: currentColor;
+	border-radius: 50%;
+	box-sizing: content-box;
+}
+
+.dli-caret-circle-fill-right::before {
+	content: "";
+	color: #fff;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-color: transparent;
+	border-width: 6px 7px;
+	border-left-color: currentColor;
+	border-right: 0;
+	transform: translateX(15%);
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+}
